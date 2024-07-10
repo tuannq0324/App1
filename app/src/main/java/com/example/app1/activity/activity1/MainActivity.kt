@@ -2,7 +2,6 @@ package com.example.app1.activity.activity1
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -96,18 +95,9 @@ class MainActivity : AppCompatActivity() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 if (!recyclerView.canScrollVertically(1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    Log.d("loadMore", "onScrollStateChanged: ")
                     viewModel.loadMore()
                 }
             }
-
-//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-//                super.onScrolled(recyclerView, dx, dy)
-//                if (!recyclerView.canScrollVertically(1)) {
-//                    Log.d("loadMore", "onScrolled: ")
-//                    viewModel.loadMore()
-//                }
-//            }
         })
     }
 
