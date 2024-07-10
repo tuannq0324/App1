@@ -1,6 +1,7 @@
 package com.example.app1.database
 
 import androidx.lifecycle.LiveData
+import com.example.app1.database.model.ImageEntity
 
 class MainRepository(database: AppDatabase) {
 
@@ -10,7 +11,7 @@ class MainRepository(database: AppDatabase) {
         return imageDao.getAll()
     }
 
-    fun getAllImage(): List<ImageEntity> {
+    private fun getAllImage(): List<ImageEntity> {
         return imageDao.getAllImage()
     }
 
@@ -20,5 +21,12 @@ class MainRepository(database: AppDatabase) {
 
     fun delete(id: String) {
         imageDao.delete(id)
+    }
+
+    fun isExist(id: String) : Boolean {
+        return getAllImage().find {
+            it.imageId == id
+        } != null
+
     }
 }

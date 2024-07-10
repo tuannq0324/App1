@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity2">
+    tools:context=".activity.activity2.MainActivity2">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvImage"
+        android:id="@+id/rvImageSelected"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:spanCount="2"
         tools:ignore="SpeakableTextPresentCheck"
         tools:listitem="@layout/item_rv_image" />
