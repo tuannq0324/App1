@@ -62,7 +62,7 @@ class SecondAdapter(
                 placeholder(R.drawable.ic_image_default)
                 error(R.drawable.ic_load_failed)
                 crossfade(true)
-                placeholderMemoryCacheKey(imageResponse.item.item.id)
+                memoryCacheKey(imageResponse.item.item.id)
                 precision(Precision.EXACT)
                 scale(Scale.FILL)
             }
